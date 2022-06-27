@@ -1,15 +1,15 @@
 Array of Objects
     Meets Expectations:
-        Array of objects:
-            ☐ is named 'quotes' @started(22-06-27 03:32)
-            ☐ contains at least 5 quote objects @started(22-06-27 03:32)
-            ☐ is free of errors that prevent the code from running @started(22-06-27 03:32)
+        ✔ Array of objects: @done(22-06-27 14:15)
+            ✔ is named 'quotes' @started(22-06-27 03:32) @done(22-06-27 14:15) @lasted(10h43m8s)
+            ✔ contains at least 5 quote objects @started(22-06-27 03:32) @done(22-06-27 14:15) @lasted(10h43m8s)
+            ✔ is free of errors that prevent the code from running @started(22-06-27 03:32) @done(22-06-27 14:15) @lasted(10h43m8s)
         
 Object Properties
     Meets Expectations:
-        ☐ All objects have 'quote' and 'source' properties @started(22-06-27 03:32)
-        ☐ At least one object has 'citation' property @started(22-06-27 03:32)
-        ☐ At least one object has 'year' property @started(22-06-27 03:32)
+        ✔ All objects have 'quote' and 'source' properties @started(22-06-27 03:32) @done(22-06-27 14:15) @lasted(10h43m16s)
+        ✔ At least one object has 'citation' property @started(22-06-27 03:32) @done(22-06-27 14:15) @lasted(10h43m16s)
+        ✔ At least one object has 'year' property @started(22-06-27 03:32) @done(22-06-27 14:15) @lasted(10h43m16s)
     
     Exceeds Expectations:
         Exceeds expectations if all are true:
