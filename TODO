@@ -1,0 +1,40 @@
+Array of Objects
+    Meets Expectations:
+        Array of objects:
+            ☐ is named 'quotes' @started(22-06-27 03:32)
+            ☐ contains at least 5 quote objects @started(22-06-27 03:32)
+            ☐ is free of errors that prevent the code from running @started(22-06-27 03:32)
+        
+Object Properties
+    Meets Expectations:
+        ☐ All objects have 'quote' and 'source' properties @started(22-06-27 03:32)
+        ☐ At least one object has 'citation' property @started(22-06-27 03:32)
+        ☐ At least one object has 'year' property @started(22-06-27 03:32)
+    
+    Exceeds Expectations:
+        Exceeds expectations if all are true:
+            ☐ At least one object has at least one additional property, such as 'tags' @started(22-06-27 03:32)
+            ☐ At least one additional property prints to the page with its quote @started(22-06-27 03:32)
+
+`getRandomQuote` Function
+    Meets Expectations:
+        ☐ 'getRandomQuote` function is named `getRandomQuote` @started(22-06-27 03:32)
+        ☐ Returns a random object from the 'quotes' array @started(22-06-27 03:32)
+
+`printQuote` Function
+    Meets Expectations:
+        'printQuote' function:
+            ☐ Is named 'printQuote' @started(22-06-27 03:32)
+            ☐ Calls the 'getRandomQuote' function @started(22-06-27 03:32)
+            ☐ Prints a 'quote' and a 'source' property with every quote @started(22-06-27 03:32)
+            ☐ Prints a 'citation' property with at least one quote @started(22-06-27 03:32)
+            ☐ Prints a 'year' property with at least one quote @started(22-06-27 03:32)
+            ☐ printed quotes match the format, layout and styles of the example quote in the `index.html` file @started(22-06-27 03:32)
+
+    Exceeds Expectations:
+        ☐ Quotes automatically refresh at regular intervals @started(22-06-27 03:32)
+        ☐ Background color changes to a random color each time the quote refreshes @started(22-06-27 03:32)
+
+Code Comments
+    Meets Expectations:
+        ☐ Comment your code @started(22-06-27 03:32)
