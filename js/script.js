@@ -170,7 +170,7 @@ const getQuote = document.getElementById("load-quote");
 
 getQuote.addEventListener("click", (e) => {
   clearInterval(newColorandQuote);
-  newColor();
+  newColorandQuote();
 });
 
 /////////////////////////////////////////////////////////////////
