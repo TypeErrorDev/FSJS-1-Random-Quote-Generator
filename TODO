@@ -13,28 +13,28 @@ Object Properties
     
     Exceeds Expectations:
         Exceeds expectations if all are true:
-            ☐ At least one object has at least one additional property, such as 'tags' @started(22-06-27 03:32)
-            ☐ At least one additional property prints to the page with its quote @started(22-06-27 03:32)
+            ✔ At least one object has at least one additional property, such as 'tags' @started(22-06-27 03:32) @done(22-06-28 02:26) @lasted(22h54m13s)
+            ✔ At least one additional property prints to the page with its quote @started(22-06-27 03:32) @done(22-06-28 02:26) @lasted(22h54m13s)
 
 `getRandomQuote` Function
     Meets Expectations:
-        ☐ 'getRandomQuote` function is named `getRandomQuote` @started(22-06-27 03:32)
-        ☐ Returns a random object from the 'quotes' array @started(22-06-27 03:32)
+        ✔ 'getRandomQuote` function is named `getRandomQuote` @started(22-06-27 03:32) @done(22-06-28 02:26) @lasted(22h54m19s)
+        ✔ Returns a random object from the 'quotes' array @started(22-06-27 03:32) @done(22-06-28 03:09) @lasted(23h37m18s)
 
 `printQuote` Function
     Meets Expectations:
         'printQuote' function:
-            ☐ Is named 'printQuote' @started(22-06-27 03:32)
-            ☐ Calls the 'getRandomQuote' function @started(22-06-27 03:32)
-            ☐ Prints a 'quote' and a 'source' property with every quote @started(22-06-27 03:32)
-            ☐ Prints a 'citation' property with at least one quote @started(22-06-27 03:32)
-            ☐ Prints a 'year' property with at least one quote @started(22-06-27 03:32)
-            ☐ printed quotes match the format, layout and styles of the example quote in the `index.html` file @started(22-06-27 03:32)
+            ✔ Is named 'printQuote' @started(22-06-27 03:32) @done(22-06-28 03:09) @lasted(23h38m)
+            ✔ Calls the 'getRandomQuote' function @started(22-06-27 03:32) @done(22-06-28 03:09) @lasted(23h38m)
+            ✔ Prints a 'quote' and a 'source' property with every quote @started(22-06-27 03:32) @done(22-06-28 03:09) @lasted(23h38m)
+            ✔ Prints a 'citation' property with at least one quote @started(22-06-27 03:32) @done(22-06-28 03:09) @lasted(23h38m)
+            ✔ Prints a 'year' property with at least one quote @started(22-06-27 03:32) @done(22-06-28 03:09) @lasted(23h38m)
+            ✔ printed quotes match the format, layout and styles of the example quote in the `index.html` file @started(22-06-27 03:32) @done(22-06-28 03:09) @lasted(23h38m)
 
     Exceeds Expectations:
-        ☐ Quotes automatically refresh at regular intervals @started(22-06-27 03:32)
-        ☐ Background color changes to a random color each time the quote refreshes @started(22-06-27 03:32)
+        ✔ Quotes automatically refresh at regular intervals @started(22-06-27 03:32) @done(22-06-28 03:10) @lasted(23h38m3s)
+        ✔ Background color changes to a random color each time the quote refreshes @started(22-06-27 03:32) @done(22-06-28 03:10) @lasted(23h38m3s)
 
 Code Comments
     Meets Expectations:
-        ☐ Comment your code @started(22-06-27 03:32)
+        ✔ Comment your code @started(22-06-27 03:32) @done(22-06-28 03:10) @lasted(23h38m5s)
