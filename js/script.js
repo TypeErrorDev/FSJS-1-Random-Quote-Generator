@@ -161,7 +161,6 @@ function setIntQuoteBG() {
 let newColorandQuote = () => {
   setInterval(setIntQuoteBG, 8000);
 };
-newColorandQuote();
 
 /////////////////////////////////////////////////////////////////
 ///////////// CLEAR AUTO COLOR REFRESH FUNCTION /////////////////
@@ -170,9 +169,8 @@ const getQuote = document.getElementById("load-quote");
 
 getQuote.addEventListener("click", (e) => {
   clearInterval(newColorandQuote);
-  newColorandQuote();
 });
-
+newColorandQuote();
 /////////////////////////////////////////////////////////////////
 ///////////// EVENTLISTENER TO POPULATE THE QUOTE ///////////////
 /////////////////////////////////////////////////////////////////
