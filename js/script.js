@@ -10,7 +10,7 @@ project 1 - A Random Quote Generator
 /////////////////////////////////////////////////////////////////
 /////////////// DECLARING THE KVP FOR MY QUOTES /////////////////
 /////////////////////////////////////////////////////////////////
-
+const totalUpvotes = "Total Upvotes - " + Math.floor(Math.random() * 10000);
 const quotes = [
   {
     quote: `We cannot solve problems with the kind of thinking we employed when we came up with them.`,
@@ -18,7 +18,7 @@ const quotes = [
     citation: `Personal Journal`,
     year: `2021`,
     tag: `Motivational`,
-    upvotes: "Total Upvotes - " + Math.floor(Math.random() * 10000),
+    upvotes: `${totalUpvotes}`,
   },
   {
     quote: `The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty`,
@@ -26,7 +26,7 @@ const quotes = [
     citation: `The Interwebs`,
     year: `1234 A.D.`,
     tag: `Musical`,
-    upvotes: "Total Upvotes - " + Math.floor(Math.random() * 10000),
+    upvotes: `${totalUpvotes}`,
   },
   {
     quote: `Either you run the day or the day runs you`,
@@ -34,7 +34,7 @@ const quotes = [
     citation: `Newspaper`,
     year: `1545 A.D.`,
     tag: `Educational`,
-    upvotes: "Total Upvotes - " + Math.floor(Math.random() * 10000),
+    upvotes: `${totalUpvotes}`,
   },
   {
     quote: `Look busy, stay busy, and you'll never be busy`,
@@ -42,7 +42,7 @@ const quotes = [
     citation: `Military`,
     year: `2012`,
     tag: `Deception`,
-    upvotes: "Total Upvotes - " + Math.floor(Math.random() * 10000),
+    upvotes: `${totalUpvotes}`,
   },
   {
     quote: `A man who commited a mistake and doesn't correct it is committing another mistake`,
@@ -50,7 +50,7 @@ const quotes = [
     citation: `A&E`,
     year: `2025 A.D.`,
     tag: `Space Travel`,
-    upvotes: "Total Upvotes - " + Math.floor(Math.random() * 10000),
+    upvotes: `${totalUpvotes}`,
   },
   {
     quote: `Talent wins games, but teamwork and intelligence win championships`,
@@ -58,7 +58,7 @@ const quotes = [
     citation: `ESPN`,
     year: `1996`,
     tag: `Teamwork`,
-    upvotes: "Total Upvotes - " + Math.floor(Math.random() * 10000),
+    upvotes: `${totalUpvotes}`,
   },
   {
     quote: `Be miserable. Or motivate yourself. Whatever has to be done, it's ALWAYS your choice`,
@@ -66,7 +66,7 @@ const quotes = [
     citation: `Books`,
     year: `2030`,
     tag: `Life`,
-    upvotes: "Total Upvotes - " + Math.floor(Math.random() * 10000),
+    upvotes: `${totalUpvotes}`,
   },
   {
     quote: `Pain is just weakness leaving the body`,
@@ -74,7 +74,7 @@ const quotes = [
     citation: `History`,
     year: `225 B.C.`,
     tag: `Jurassic Park`,
-    upvotes: "Total Upvotes - " + Math.floor(Math.random() * 10000),
+    upvotes: `${totalUpvotes}`,
   },
   {
     quote: `The standard you walk past, is the standard you accept`,
@@ -82,7 +82,7 @@ const quotes = [
     citation: `Intranet`,
     year: `1999`,
     tag: `Fun`,
-    upvotes: "Total Upvotes - " + Math.floor(Math.random() * 10000),
+    upvotes: `${totalUpvotes}`,
   },
   {
     quote: `Heads over here...Bodies over there`,
@@ -90,7 +90,7 @@ const quotes = [
     citation: `Film`,
     year: `2018`,
     tag: `Movie Quotes`,
-    upvotes: "Total Upvotes - " + Math.floor(Math.random() * 10000),
+    upvotes: `${totalUpvotes}`,
   },
   {
     quote: `I dont push, I dont pull, but I go slow`,
@@ -98,7 +98,7 @@ const quotes = [
     citation: `The Darkweb`,
     year: `2022`,
     tag: `Life Advice`,
-    upvotes: "Total Upvotes - " + Math.floor(Math.random() * 10000),
+    upvotes: `${totalUpvotes}`,
   },
 ];
 
@@ -107,9 +107,8 @@ const quotes = [
 /////////////////////////////////////////////////////////////////
 
 function getRandomQuote() {
-  let newNumber = Math.floor(Math.random() * quotes.length);
-  let newQuote = quotes[newNumber];
-  return newQuote;
+  let newRandomQuote = Math.floor(Math.random() * quotes.length);
+  return quotes[newRandomQuote];
 }
 
 /////////////////////////////////////////////////////////////////
@@ -117,16 +116,24 @@ function getRandomQuote() {
 /////////////////////////////////////////////////////////////////
 
 function printQuote() {
-  let populateQuote = getRandomQuote();
+  let quote = getRandomQuote();
   let populateHtml = "";
-  let quote = populateQuote;
 
-  populateHtml += `
-    <p class='quote'>${quote.quote}</p>
-    <p class='source'>${quote.source}</p>
-    <span class='citation'>${quote.citation}</span>
-    <span class='year'>${quote.year}, ${quote.tag}, ${quote.upvotes}</span>
-  `;
+  populateHtml += `<p class='quote'>${quote.quote}</p>`;
+  populateHtml += `<p class='source'>${quote.source}`;
+  if (quotes.citation !== undefined) {
+    populateHtml = `<span class='citation'>${quote.citation}</span>`;
+  }
+  if (quote.year != undefined) {
+    populateHtml += `<span class='year'>${quote.year}</span>`;
+  }
+  if (quote.tag !== undefined) {
+    populateHtml += `<span class='tag'>, ${quote.tag}</span>`;
+  }
+  if (quote.upvotes !== undefined) {
+    populateHtml += `, ${quote.upvotes}</span>`;
+  }
+  populateHtml += `</p>`;
   document.getElementById("quote-box").innerHTML = populateHtml;
   setBg();
 }
@@ -143,8 +150,28 @@ const setBg = () => {
 /////////////////////////////////////////////////////////////////
 ///////////// MDN - AUTO COLOR REFRESH FUNCTION /////////////////
 /////////////////////////////////////////////////////////////////
-let newColor = () => (newRandomHex = setInterval(setBg, 8000));
-newColor();
+
+// combines the two functions that need to be on a timer
+function setIntQuoteBG() {
+  setBg();
+  printQuote();
+}
+
+// declares the refresh rate for the bg color and the quotes
+let newColorandQuote = () => {
+  setInterval(setIntQuoteBG, 8000);
+};
+newColorandQuote();
+
+/////////////////////////////////////////////////////////////////
+///////////// CLEAR AUTO COLOR REFRESH FUNCTION /////////////////
+/////////////////////////////////////////////////////////////////
+const getQuote = document.getElementById("load-quote");
+
+getQuote.addEventListener("click", (e) => {
+  clearInterval(newColorandQuote);
+  newColor();
+});
 
 /////////////////////////////////////////////////////////////////
 ///////////// EVENTLISTENER TO POPULATE THE QUOTE ///////////////
